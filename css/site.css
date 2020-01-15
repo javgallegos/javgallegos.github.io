@@ -1,4 +1,4 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
@@ -24,8 +24,29 @@ a {
   border-color: #1861ac;
 }
 
+.navbar {
+  font-family: "Baskerville Book BQ Regular";
+  font-weight: 400px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  padding: 14px;
+}
+
 .navbar-toggler {
   border: 0px solid transparent;
+}
+
+.nav-custom {
+  margin: 0 15px;
+  padding: 0;
+}
+
+.jumbotron {
+  background-color: white;
+  border-radius: 0;
 }
 
 /* Sticky footer styles
@@ -57,231 +78,12 @@ html {
   min-height: 100%;
 }
 
-/* Name on left */
-.css-1yap0tr {
-  -webkit-flex:0 0 100%;
-  -ms-flex:0 0 100%;
-  flex:0 0 100%;
-  text-align:center;
-  -webkit-order:1;
-  -ms-flex-order:1;
-  order:1;
-  margin-bottom:5px;
- }
- @media (min-width:544px) {
-  .css-1yap0tr {
-   text-align:right;
-   -webkit-flex:0 1 auto;
-   -ms-flex:0 1 auto;
-   flex:0 1 auto;
-   margin-bottom:0;
-  }
- }
-/* the and */
- .css-kvt3a3 {
-  text-align:center;
-  -webkit-flex:0 0 100%;
-  -ms-flex:0 0 100%;
-  flex:0 0 100%;
-  -webkit-order:2;
-  -ms-flex-order:2;
-  order:2;
-  margin-bottom:5px;
- }
- @media (min-width:544px) {
-  .css-kvt3a3 {
-   -webkit-flex:0 0 135px;
-   -ms-flex:0 0 135px;
-   flex:0 0 135px;
-   margin:0;
-  }
- }
-
- .css-1oad6oc {
-  display:inline-block;
-  text-indent:-10000px;
-  width:100px;
-  height:100px;
-  /*background-image:url(https://d3t14gfu9ehll4.cloudfront.net/themes/39e6a26c-f52d-4b94-af55-c135638db09c/root_SmallGraphic.png);*/
-  background-image:url(http://images.freeimages.com/images/premium/large-thumbs/5949/59493180-watercolor-illustration-bunch-of-grapes-in-wineglass.jpg);
-  background-size:contain;
-  background-position:center center;
-  background-repeat:no-repeat;
- }
- 
-
-/* name on right */
-.css-397m7v {
-  -webkit-flex:0 0 100%;
-  -ms-flex:0 0 100%;
-  flex:0 0 100%;
-  text-align:center;
-  margin-bottom:20px;
-  -webkit-order:3;
-  -ms-flex-order:3;
-  order:3;
- }
- @media (min-width:544px) {
-  .css-397m7v {
-   text-align:left;
-   -webkit-flex:0 1 auto;
-   -ms-flex:0 1 auto;
-   flex:0 1 auto;
-   -webkit-order:3;
-   -ms-flex-order:3;
-   order:3;
-   margin-bottom:0;
-  }
- }
-
- .css-1ghra4d {
-  font-family:"Baskerville Book BQ Regular";
-  font-weight:400;
-  font-style:normal;
-  line-height:1;
-  text-transform:none;
-  -webkit-letter-spacing:5px;
-  -moz-letter-spacing:5px;
-  -ms-letter-spacing:5px;
-  letter-spacing:5px;
-  font-size:31.200000000000003px;
-  color:#3b3c33;
-  margin:0;
- }
- @media (min-width:544px) {
-  .css-1ghra4d {
-   font-size:46.800000000000004px;
-  }
- }
- @media (min-width:768px) {
-  .css-1ghra4d {
-   font-size:54.6px;
-  }
- }
- @media (min-width:992px) {
-  .css-1ghra4d {
-   font-size:62.400000000000006px;
-  }
- }
- 
-
-.css-2nt5jh {
-  padding: 0;
-  margin: 0;
-  z-index: 1000;
-}
-@media (max-width:543px) {
-  .css-2nt5jh {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 10px 0;
-    background-color: #f8f5f1;
-    text-align: left;
-    overflow-y: scroll;
-  }
-}
-
-@media (min-width:544px) {
-  .css-2nt5jh {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-pack:center;
-    -webkit-justify-content:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-    -webkit-align-items:center;
-    -webkit-box-align:center;
-    -ms-flex-align:center;
-    align-items:center;
-    -webkit-flex-direction:row;
-    -ms-flex-direction:row;
-    flex-direction:row;
-    -webkit-flex-wrap:wrap;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap;
-  }
-}
-
-.css-18atp3i-children-CoupleHorizontalNames {
-  display:-webkit-box;
-  display:-webkit-flex;
-  display:-ms-flexbox;
-  display:flex;
-  -webkit-flex-direction:row;
-  -ms-flex-direction:row;
-  flex-direction:row;
-  -webkit-flex-wrap:wrap;
-  -ms-flex-wrap:wrap;
-  flex-wrap:wrap;
-  -webkit-align-items:center;
-  -webkit-box-align:center;
-  -ms-flex-align:center;
-  align-items:center;
-  -webkit-box-pack:center;
-  -webkit-justify-content:center;
-  -ms-flex-pack:center;
-  justify-content:center;
-  padding:10px 0;
- }
- @media (min-width:544px) {
-  .css-18atp3i-children-CoupleHorizontalNames {
-   -webkit-flex-wrap:nowrap;
-   -ms-flex-wrap:nowrap;
-   flex-wrap:nowrap;
-  }
- }
- .css-18atp3i-children-CoupleHorizontalNames .smallGraphic {
-  width:50px !important;
-  height:50px !important;
- }
- .css-18atp3i-children-CoupleHorizontalNames .largeHeadline {
-  font-size:31.200000000000003px !important;
- }
- @media (min-width:544px) {
-  .css-18atp3i-children-CoupleHorizontalNames .smallGraphic {
-   width:75px !important;
-   height:75px !important;
-  }
-  .css-18atp3i-children-CoupleHorizontalNames .largeHeadline {
-   font-size:39px !important;
-  }
- }
-
-.css-11ofsc4 {
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  box-shadow:inset 0 2px 0 0 rgba(0,0,0,0.1),inset 0 -2px 0 0 rgba(0,0,0,0.1);
-}
-
 .heading {
   padding-bottom: 15px;
   text-align: center;
   max-width: 960px;
   margin: 0px auto;
   padding-top: 80px;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  font-family: "Baskerville Book BQ Regular";
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.6;
-  text-transform: none;
-  letter-spacing: normal;
-  font-size: 16.8px;
-  color: rgb(59, 60, 51);
-  font-variant-ligatures: none;
 }
 
 .coupleHorizontalNames {
@@ -291,6 +93,144 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px 0;
+}
+
+@media (min-width: 544px) {
+  .coupleHorizontalNames {
+    flex-wrap: nowrap;
+  }
+}
+
+.coupleHorizontalNames .smallGraphic {
+  width: 50px;
+  height: 50px;
+}
+
+.coupleHorizontalNames .largeHeadline {
+  font-size: 31.200000000000003px;
+}
+
+@media (min-width: 544px) {
+  .coupleHorizontalNames .smallGraphic {
+    width: 75px;
+    height: 75px;
+  }
+  .coupleHorizontalNames .largeHeadline {
+    font-size: 39px;
+  }
+}
+
+/* Name on left */
+.coupleLeftName {
+  flex: 0 0 100%;
+  text-align: center;
+  order: 1;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 544px) {
+  .coupleLeftName {
+    text-align: right;
+    flex: 0 1 auto;
+    margin-bottom: 0;
+  }
+}
+
+/* Name on right */
+.coupleRightName {
+  flex: 0 0 100%;
+  text-align: center;
+  order : 3;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 544px) {
+  .coupleRightName {
+    text-align: left;
+    flex: 0 1 auto;
+    margin-bottom: 0;
+  }
+}
+
+/* the conjuction */
+.coupleJoin {
+  text-align: center;
+  flex: 0 0 100%;
+  order: 2;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 544px) {
+  .coupleJoin {
+    flex: 0 1 135px;
+    margin-bottom: 0;
+  }
+}
+
+/* Join image */
+.joinImage {
+  display: inline-block;
+  text-indent: -10000px;
+  width: 100px;
+  height: 100px;
+  background-image: url(/img/watercolor-illustration-bunch-of-grapes-in-wineglass.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.coupleName {
+  font-family: "Baskerville Book BQ Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: 5px;
+  font-size: 31.200000000000003px;
+  color: #3b3c33;
+  margin: 0;
+}
+
+@media (min-width: 544px) {
+  .coupleName {
+    font-size: 46.80000000000004px;
+  }
+}
+@media (min-width: 768px) {
+  .coupleName {
+    font-size: 54.6px;
+  }
+}
+@media (min-width: 992px) {
+  .coupleName {
+    font-size: 62.40000000000006px;
+  }
+}
+
+iframe {
+  width: 440px;
+  height: 480px;
+  border: 0;
+  margin: 0;
+}
+@media (max-width: 440px) {
+  iframe {
+    width: 100%;
+  }
+}
+
+body {
+  /* Margin bottom by footer height */
+  /* margin-bottom: 60px; */
+  font-family: "Baskerville Book BQ Regular";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 16.8px;
+  color: rgb(59, 60, 51);
+  font-variant-ligatures: none;
 }
 
 .footer {
