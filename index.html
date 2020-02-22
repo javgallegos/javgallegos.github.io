@@ -9,6 +9,76 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/site.css" />
+  <style>
+  .myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .myImg:hover { opacity: 0.7; }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgb(0,0,0,0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: #ccc;
+    height: 150px;
+  }
+  .modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  @-webkit-keyframes zoom {
+    from { -webkit-transform: scale(0); }
+    to { -webkit-transform:scale(1) }
+  }
+  @keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+  }
+  .close {
+    position: absolute;
+    top: 60px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .close:hover,.close.focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: position;
+  }
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+  </style>
 </head>
 <body data-spy="scroll" data-target="#myScrollSpy" data-offset="1" id="home">
   <div class="jumbotron text-center" style="padding: 0 0 0;margin-bottom:0">
@@ -36,6 +106,7 @@
         <li class="nav-item nav-custom"><a class="nav-link" href="#event">EVENT</a></li>
         <li class="nav-item nav-custom"><a class="nav-link" href="#travel">TRAVEL</a></li>
         <li class="nav-item nav-custom"><a class="nav-link" href="#gift_registry">GIFT REGISTRY</a></li>
+        <li class="nav-item nav-custom"><a class="nav-link" href="#attire">ATTIRE</a></li>
       </ul>
     </div>
   </nav>
@@ -43,7 +114,7 @@
  <!-- home -->
  <section id="home">
   <div stle="position:relative;">
-    <img style="display:block;width:100%;" src="img\oregon_coast_1.jpg" alt="Oregon Coast"/>
+    <img style="display:block;width:100%;" src="img/oregon_coast_1.jpg" alt="Oregon Coast"/>
   </div>
   <div class="container">
     <div class="heading text-center">
@@ -51,7 +122,8 @@
       <p>
         Welcome to our wedding website!<br>
         We look forward to spending our special day with family and friends.<br>
-        <b>Please RSVP by March 1st, 2020.</b>
+        <b>Please RSVP by March 1st, 2020.</b><br><br>
+        <i>The spot where we were engaged (landing page image)</i>
       </p>
     </div>
   </div>
@@ -70,34 +142,37 @@
     <div class="container">
         <div class="heading text-center">
             <h2>Photos<h2>
-
+            
             <div class="row">
               <div class="col-md-4">
-                <div class="thumbnail">
-                  <a href="img/photo1.jpg" target="_blank">
-                    <img src="img/photo1_thumbnail.jpg" class="img-thumbnail" alt="image" width="300" height="200">
-                  </a>
+                  <img class="myImg" srcset="img/photo1_thumbnail.jpg" alt="San Diego Sunset" width="300" height="200" src="img/photo1.JPG">
+              </div>
+              <div class="col-md-4">
+                <div>
+                  <img class="myImg" srcset="img/photo2_thumbnail.jpg" alt="Cal Poly Graduation" width="300" height="200" src="img/photo2.jpg">
                 </div>
               </div>
               <div class="col-md-4">
                 <div>
-                  <a href="img/photo2.jpg" target="_blank">
-                    <img src="img/photo2_thumbnail.jpg" class="img-thumbnail" alt="image" width="300" height="200">
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div>
-                  <a href="img/oregon_coast_1.jpg" target="_blank">
-                    <img src="img/oregon_coast_1.jpg" class="img-thumbnail" alt="image" width="300" height="200">
-                  </a>
+                  <img class="myImg" src="img/photo3.jpg" alt="Laurin and Javi" width="300" height="200">
                 </div>
               </div>
             </div>
-
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- The close button -->
+          <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+          <!-- Modal content (the image) -->
+          <img class="modal-content" id="img01">
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
         </div>
+
+      </div>
     </div>
 </section>
+
 <!-- event -->
 <section id="event">
   <div class="container">
@@ -133,11 +208,11 @@
               <b>Hampton Inn & Suites</b><br>28190 Jefferson Avenue, Temecula, CA 92590<br>
               <a href="https://www.hilton.com/en/hotels/laxhshx-hampton-suites-temecula/" target="_blank">VISIT WEBSITE</a><br><br>
               <b>Quality Inn Temecula Valley Wine Country</b><br>27338 Jefferson Avenue, Temecula, CA, 92590<br>
-              <a href="https://www.guestreservations.com/quality-inn-temecula-valley-wine-country/booking" target="_blank">VISIT WEBSTIE</a><br><br>
+              <a href="https://www.guestreservations.com/quality-inn-temecula-valley-wine-country/booking" target="_blank">VISIT WEBSITE</a><br><br>
               <b>Best Western Plus Temecula Wine Country Hotel & Suites</b><br>41841 Moreno Road, Temecula, CA 92590<br>
-              <a href="https://www.bestwestern.com/en_US/book/hotels-in-temecula/best-western-plus-temecula-wine-country-hotel-suites/propertyCode.05745.html" target="_blank">VISIT WEBSTIE</a><br><br>
+              <a href="https://www.bestwestern.com/en_US/book/hotels-in-temecula/best-western-plus-temecula-wine-country-hotel-suites/propertyCode.05745.html" target="_blank">VISIT WEBSITE</a><br><br>
               <b>Holiday Inn Express Temecula</b><br>27660 Jefferson Avenue, Temecula, CA 92590<br>
-              <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/temecula/tzcla/hoteldetail" target="_blank">VISIT WEBSTIE</a><br>
+              <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/temecula/tzcla/hoteldetail" target="_blank">VISIT WEBSITE</a><br>
             </p>
         </div>
     </div>
@@ -154,12 +229,25 @@
               As our worldly possessions are plentiful as such<br>
               On our wedding present list, there really isn't much<br>
               We are looking forward to your presence, not your presents<br>
-              If we are honered with a gift from you,<br>
+              If we are honored with a gift from you,<br>
               A gift of currency is all we ask<br>
               To help us on our lifelong task<br>
             </p>
         </div>
     </div>
+</section>
+
+<!-- Attire -->
+<section id="attire">
+  <div class="container">
+    <div class="heading text-center">
+      <h2>Attire</h2>
+      <br>
+      <p>Please dress in semi-formal attire.</p>
+      <img src="img/semi_formal_attire.png" alt="Semi-Formal Attire">
+      <br>
+    </div>
+  </div>
 </section>
 
 <div class="jumbotron text-center" style="margin-bottom:0;background-color: #b3aed1;">
@@ -190,6 +278,24 @@
         } // End if
       });
     })
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    // Get the image and insert in inside the modal - use its "alt" text as a caption
+    var img = $('.myImg');
+    var modalImg = $("#img01");
+    var captionText = document.getElementById("caption");
+    $('.myImg').click(function() {
+      modal.style.display = "block";
+      var newSrc = this.src;
+      modalImg.attr('src', newSrc);
+      captionText.innerHTML = this.alt;
+    });
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
   </script>
 
 </body>

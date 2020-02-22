@@ -9,7 +9,16 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: purple;
+  /* color:  #4d4196; */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .btn-primary {
@@ -23,6 +32,7 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
 
 .navbar {
   font-family: "Baskerville Book BQ Regular";
@@ -43,6 +53,7 @@ a {
   margin: 0 15px;
   padding: 0;
 }
+
 
 .jumbotron {
   background-color: white;
